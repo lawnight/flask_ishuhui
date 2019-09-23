@@ -4,7 +4,7 @@ from ishuhui.extensions.flasksqlalchemy import db
 
 class Comic(db.Model):
     __tablename__ = 'comics'
-    id = db.Column(db.Integer, primary_key=True, unique=True)
+    id = db.Column(db.Integer, primary_key=True, unique=True,autoincrement=True)
     title = db.Column(db.String(256), nullable=False)
     description = db.Column(db.String(1024), nullable=False)
     refresh_time = db.Column(db.DateTime, nullable=True)

@@ -2,6 +2,11 @@
   <img src="https://i.loli.net/2017/08/27/59a2ca890206c.gif" style="width:80%" alt="Ishuhui!"/>
 </p>
 
+## 概述
+
+fork Ishuhui漫画web项目，并做了修改。
+env.py 配置漫画对应的目录
+
 ## Ishuhui
 
 A flask project built for learning. Responsive waterfalls flow by [Masonry](https://masonry.desandro.com/) 
