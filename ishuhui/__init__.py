@@ -7,7 +7,7 @@ import env
 from flask_assets import Environment, Bundle
 
 def create_app(config, should_register_blueprints=True):
-    app = Flask(__name__,static_folder = r'D:\test',static_url_path='/assets')
+    app = Flask(__name__,static_folder = env.ASSETS,static_url_path='/assets')
     
     assets = Environment(app)
     js = Bundle('app.js','style.css')

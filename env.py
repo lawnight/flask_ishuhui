@@ -12,7 +12,7 @@ CELERY_BROKER_URL='redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
 # 漫画图片的目录，需要把static目录下的js等文件，copy在这个目录下
-ASSETS = r'd:\test'
+ASSETS = r'D:\image'
 # 漫画的id 对应漫画的文件夹名字
-COMICS = [{'id':1,'title':'火影忍者','description':'','classify_id':1}]
+COMICS = [{'id':1,'title':'h-mate','description':'','classify_id':1}]
 

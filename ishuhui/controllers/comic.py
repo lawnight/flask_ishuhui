@@ -103,29 +103,29 @@ def chapter(comic_id, chapter_id):
     state = 1
     next_chapter = None
     prev_chapter = None
+    chapter = None
     for c in data_get_chapters(comic):
         print(c.id,chapter_id)
         if int(c.id) == chapter_id:
             state = 2
-            print(state,'fsfsfs')
+            chapter = c
             continue
         if state == 2:
             next_chapter = c
             break
         else:
             prev_chapter = c
-
-    chapter = get_chapter_db(chapter_id)
     # 文件目录   
    
     #comic_name = os.path.basename(comic_path) 
     comic_name = os.path.basename(comic_path) 
 
     #找出当前章节，所有的image    
-    chapter_path = os.path.join(comic_path,str(chapter_id))
+    chapter_path = os.path.join(comic_path,str(chapter.title))
     images = os.listdir(chapter_path)
+    images = [x for x in images if 'jpg' in x]
     images.sort(key=lambda x:int(re.findall(r'\d+',x)[0]))
-    images = ["/assets/{}/{}/{}".format(comic_name,chapter_id,x) for x in images]  
+    images = ["/assets/{}/{}/{}".format(comic_name,chapter.title,x) for x in images]  
     
     #前后章节
 
